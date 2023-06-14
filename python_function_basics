@@ -1,0 +1,69 @@
+Write a Python Program to Display Fibonacci Sequence Using Recursion?
+Ans:-
+here we have used recursion to find the fabonacci sequence as below.
+def fabonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0,1]
+    else:
+        fib_sequence=fabonacci(n-1)
+        fib_sequence.append(fib_sequence[-1]+fib_sequence[-2])
+        return fib_sequence
+
+terms=int(input("enter your number of terms"))
+
+fib_seq=fabonacci(terms)
+print("fabonacci sequesnce")
+print(fib_seq)
+
+Q2. Write a Python Program to Find Factorial of Number Using Recursion?
+Ans:-
+Here we have written code using recursion to find factorial of the given number.
+def factorial(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*factorial(n-1)
+
+number=int(input("enter your number"))
+
+facto=factorial(number)
+print(f"this is the factorial of {facto}")
+
+Q3 . Write a Python Program to calculate your Body Mass Index?
+Ans:-
+Here we have written program to find body mass index as below .
+def calculate_bmi(weight,height):
+    bmi=weight/(height**2)
+    return bmi
+weight=float(input("Your weight is: "))
+height=float(input("Your height is: "))
+
+bmi1=calculate_bmi(weight,height)
+print(f"your bmi is {bmi1}")
+#In this program, the calculate_bmi() function takes the weight (in kilograms) and height (in meters) as inputs and calculates the BMI using the formula weight / (height ** 2). The BMI value is then returned.
+
+Q4. Write a Python Program to calculate the natural logarithm of any number?
+Ans:-
+Here we have written code find log of any number using math module as below.
+import math
+
+result=math.log(number)
+number=float(input("enter your number"))
+print(f"the natural log of {number} is {result}")
+
+Q5 . Write a Python Program for cube sum of first n natural numbers?
+Ans:-
+Here we have written function to find the sum of cube as below.
+def cube_sum(n):
+    sum=0
+    for i in range(1 , n+1):
+        sum += i**3
+    return sum
+n=int(input("enter the cube values"))
+
+result=cube_sum(n)
+print(f"the cube sum of {n} is {result}")
